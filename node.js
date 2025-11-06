@@ -6,6 +6,7 @@
 //then we end up with duplicate vavlues being stored whereas
 //if we use an adjacency matrix we only need one source of truth
 
+//example change
 class graph {
 	constructor() {
 		this.nodes = {};
