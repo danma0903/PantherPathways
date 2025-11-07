@@ -23,9 +23,9 @@ class graph {
 
 class node {
 	constructor(xCoord, yCoord, nodeName) {
-		this.xCoord;
-		this.yCoord;
-		this.name;
+		this.xCoord = xCoord;
+		this.yCoord = yCoord;
+		this.name = nodeName;
 		this.edges = [];
 	}
 
