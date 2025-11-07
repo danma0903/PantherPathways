@@ -6,6 +6,7 @@
 //then we end up with duplicate vavlues being stored whereas
 //if we use an adjacency matrix we only need one source of truth
 
+//example change
 class graph {
 	constructor() {
 		this.nodes = {};
@@ -21,19 +22,22 @@ class graph {
 }
 
 class node {
-	constructor(xCoord, yCoord, nodeName, edges) {
+	constructor(xCoord, yCoord, nodeName) {
 		this.xCoord;
 		this.yCoord;
 		this.name;
-		this.edges = edges;
+		this.edges = [];
 	}
 
+	addEdge(edge) {
+		this.push.append(edge);
+	}
 	getName() {
 		return this.name;
 	}
-	getDistanceTo(nodeName) {
+	getDistanceTo(node) {
 		for (edge of edges) {
-			if (edge.contains(nodeName) && edge.contains(this.name)) {
+			if (edge.contains(node.getName()) && edge.contains(this.name)) {
 				return edge.weight;
 			} else {
 				continue;
@@ -47,5 +51,9 @@ class edge {
 		this.weight = weight;
 		this.leftNode = node1;
 		this.rightNode = node2;
+	}
+
+	getOppositeNode(node) {
+		return node.getName() === this.leftNode ? this.rightNode : this.leftNode;
 	}
 }
