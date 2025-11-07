@@ -30,19 +30,25 @@ class node {
 	}
 
 	addEdge(edge) {
-		this.push.append(edge);
+		this.edges.push(edge);
 	}
 	getName() {
 		return this.name;
 	}
 	getDistanceTo(node) {
-		for (edge of edges) {
-			if (edge.contains(node.getName()) && edge.contains(this.name)) {
+		//should this function assume that all nodes being requested
+		//to are properly connected?
+		for (edge of this.edges) {
+			if (
+				edge.getNodes().includes(this.name) &&
+				edge.getNodes().includes(node.getName())
+			) {
 				return edge.weight;
 			} else {
 				continue;
 			}
 		}
+		return -1;
 	}
 }
 
@@ -53,6 +59,10 @@ class edge {
 		this.rightNode = node2;
 	}
 
+	getNodes() {
+		//returns the names of the nodes the edge attaches
+		return [this.leftNode.getName(), this.rightNode.getName()];
+	}
 	getOppositeNode(node) {
 		return node.getName() === this.leftNode ? this.rightNode : this.leftNode;
 	}
