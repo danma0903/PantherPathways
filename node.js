@@ -9,7 +9,7 @@
 //example change
 class graph {
 	constructor() {
-		this.nodes = {};
+		this.nodes = [];
 	}
 
 	addNode(node) {
@@ -20,7 +20,29 @@ class graph {
 		delete nodes.nodename;
 	}
 
-	getNeighborNodes(node, ) {
+	getNeighborNodes(node) {
+		let neighborNodes = [];
+		for (let i = 0; i < node.edges.length; i++) {
+			if (node.edges[i].node1.getName() === node.getName() || node.edges[i].node2.getName() === node.getName()) {
+				neighborNodes.push(node.edges[i].getOppositeNode(node));
+				
+			}
+			else {
+				console.log("no");
+			}
+
+
+		}
+		return neighborNodes;
+
+
+
+
+		// for all edges of node
+		// if either node1 or node2 = this.node
+		// return getOppositeNode(this.node)
+
+		//}
 
 	}
 }
@@ -76,11 +98,27 @@ class edge {
 	}
 }
 
-let nas = new node(5, 5, "Natural Science Buildling");
-console.log(nas.getName());
+let nas = new node(5, 5,  "Natural Science Building");
+let RHN = new node(10, 10, "Rodda Hall North");
+let RHS = new node(15, 15, "Rodda Hall South");
+let library = new node(20, 20, "Library");
 
-let library = new node(10, 10, "library");
-let testEdge =  new edge(15, nas, library);
-let nDas = new node (12, 12, "fdsfs");
+let edge1 = new edge(15, nas, RHN);
+let edge2 = new edge(20, nas, RHS);
+let edge3 = new edge(25, library, nas);
 
-console.log(testEdge.getOppositeNode(nDas).getName());
+nas.addEdge(edge1);
+nas.addEdge(edge2);
+nas.addEdge(edge3);
+
+let graph1 = new graph();
+graph1.addNode(nas);
+graph1.addNode(RHN);
+graph1.addNode(RHS);
+graph1.addNode(library);
+
+const neighbors = graph1.getNeighborNodes(nas);
+for (neighbor of neighbors) {
+	console.log(neighbor.getName());
+}
+
