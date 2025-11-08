@@ -19,6 +19,10 @@ class graph {
 	deleteNode(nodeName) {
 		delete nodes.nodename;
 	}
+
+	getNeighborNodes(node, ) {
+
+	}
 }
 
 class node {
@@ -55,8 +59,8 @@ class node {
 class edge {
 	constructor(weight, node1, node2) {
 		this.weight = weight;
-		this.leftNode = node1;
-		this.rightNode = node2;
+		this.node1 = node1;
+		this.node2 = node2;
 	}
 
 	getNodes() {
@@ -64,6 +68,19 @@ class edge {
 		return [this.leftNode.getName(), this.rightNode.getName()];
 	}
 	getOppositeNode(node) {
-		return node.getName() === this.leftNode ? this.rightNode : this.leftNode;
+
+		if (node.getName() != this.node1.getName() && node.getName() != this.node2.getName()) {
+			throw new Error("Invalid node");
+		}
+		return node.getName() === this.node1.getName() ? this.node2 : this.node1;
 	}
 }
+
+let nas = new node(5, 5, "Natural Science Buildling");
+console.log(nas.getName());
+
+let library = new node(10, 10, "library");
+let testEdge =  new edge(15, nas, library);
+let nDas = new node (12, 12, "fdsfs");
+
+console.log(testEdge.getOppositeNode(nDas).getName());
