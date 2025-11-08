@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <canvas id="scc-map"></canvas>
+      <div class="drawer">
+        <header class="drawer-header">
+          <text id="heading">Panther Pathways</text>
+        </header>
+        <div class="drawer-content">
+          <select>
+            <option disabled="true">select a starting point</option>
+            <option>hi friends</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <script>
+      canvas = document.getElementById("scc-map");
+
+      ctx = canvas.getContext("2d");
+      ctx.imageSmoothingEnabled = false;
+
+      const mapImage = new Image();
+      // const aspectRatio = mapImage.height / mapImage.width;
+
+      mapImage.src = "./map.png";
+
+      mapImage.onload = () => {
+        console.log(mapImage.height, mapImage.width);
+        //set the canvas width to the image width of the map
+        //this only needs to happen once as drawing nodes will not affect the map
+        canvas.width = mapImage.width;
+        canvas.height = mapImage.height;
+        ctx.drawImage(mapImage, 0, 0, canvas.clientWidth, canvas.clientHeight);
+      };
+    </script>
+  </body>
+</html>

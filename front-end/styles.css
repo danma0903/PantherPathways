@@ -1,0 +1,44 @@
+body {
+  height: 500px;
+}
+
+.container {
+  position: relative;
+}
+.drawer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 300px;
+}
+.drawer-header {
+  background-color: #8a0028;
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  border-top: 3px black solid;
+  border-right: 3px black solid;
+  border-left: 3px black solid;
+}
+
+.drawer-content {
+  background-color: #f8eded;
+  height: 300px;
+  width: 100%;
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+#heading {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#scc-map {
+  height: 100%;
+  width: 100%;
+}

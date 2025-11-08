@@ -8,62 +8,64 @@
 
 //example change
 class graph {
-	constructor() {
-		this.nodes = {};
-	}
+  constructor() {
+    this.nodes = {};
+  }
 
-	addNode(node) {
-		this.nodes[node.name] = node;
-	}
+  addNode(node) {
+    this.nodes[node.name] = node;
+  }
 
-	deleteNode(nodeName) {
-		delete nodes.nodename;
-	}
+  deleteNode(nodeName) {
+    delete nodes.nodename;
+  }
 }
 
 class node {
-	constructor(xCoord, yCoord, nodeName) {
-		this.xCoord = xCoord;
-		this.yCoord = yCoord;
-		this.name = nodeName;
-		this.edges = [];
-	}
+  constructor(xCoord, yCoord, nodeName) {
+    this.xCoord = xCoord;
+    this.yCoord = yCoord;
+    this.name = nodeName;
+    this.edges = [];
+  }
 
-	addEdge(edge) {
-		this.edges.push(edge);
-	}
-	getName() {
-		return this.name;
-	}
-	getDistanceTo(node) {
-		//should this function assume that all nodes being requested
-		//to are properly connected?
-		for (edge of this.edges) {
-			if (
-				edge.getNodes().includes(this.name) &&
-				edge.getNodes().includes(node.getName())
-			) {
-				return edge.weight;
-			} else {
-				continue;
-			}
-		}
-		return -1;
-	}
+  addEdge(edge) {
+    this.edges.push(edge);
+  }
+  getName() {
+    return this.name;
+  }
+  getDistanceTo(node) {
+    //should this function assume that all nodes being requested
+    //to are properly connected?
+    for (edge of this.edges) {
+      if (
+        edge.getNodes().includes(this.name) &&
+        edge.getNodes().includes(node.getName())
+      ) {
+        return edge.weight;
+      } else {
+        continue;
+      }
+    }
+    return -1;
+  }
 }
 
 class edge {
-	constructor(weight, node1, node2) {
-		this.weight = weight;
-		this.leftNode = node1;
-		this.rightNode = node2;
-	}
+  constructor(weight, node1, node2) {
+    this.weight = weight;
+    this.leftNode = node1;
+    this.rightNode = node2;
+  }
 
-	getNodes() {
-		//returns the names of the nodes the edge attaches
-		return [this.leftNode.getName(), this.rightNode.getName()];
-	}
-	getOppositeNode(node) {
-		return node.getName() === this.leftNode ? this.rightNode : this.leftNode;
-	}
+  getNodes() {
+    //returns the names of the nodes the edge attaches
+    return [this.leftNode.getName(), this.rightNode.getName()];
+  }
+  getOppositeNode(node) {
+    return node.getName() === this.leftNode.getName()
+      ? this.rightNode
+      : this.leftNode;
+  }
 }
