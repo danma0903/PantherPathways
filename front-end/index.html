@@ -14,11 +14,41 @@
           <text id="heading">Panther Pathways</text>
         </header>
         <div class="drawer-content">
-          <select>
-            <option disabled="true">select a starting point</option>
-            <option>hi friends</option>
-          </select>
+          <div class="selector-container">
+            <select id="startLocSelector" class="loc-selector">
+              <option selected disabled hidden>
+                &#128204;Select Start Location
+              </option>
+              <option>hi friends</option>
+            </select>
+            <select id="endLocSelector" class="loc-selector">
+              <option selected disabled hidden>Select End Location</option>
+            </select>
+          </div>
         </div>
+        <script>
+          //dynamically load locations into select tag
+          const startLocations = ["gym", "library"]; //list of strings
+          const endLocations = ["gym", "library", "bus"]; //list of strings
+
+          const startLocationSelector =
+            document.getElementById("startLocSelector");
+          const endLocationSelector = document.getElementById("endLocSelector");
+
+          startLocations.forEach((location) => {
+            addOptionToSelectTag(location, startLocationSelector);
+          });
+          endLocations.forEach((location) => {
+            addOptionToSelectTag(location, endLocationSelector);
+          });
+
+          function addOptionToSelectTag(option, parent) {
+            //accepts a string and creates an option tag
+            const newOptionElement = document.createElement("option");
+            newOptionElement.textContent = option;
+            parent.appendChild(newOptionElement);
+          }
+        </script>
       </div>
     </div>
     <script>
@@ -38,7 +68,7 @@
         //this only needs to happen once as drawing nodes will not affect the map
         canvas.width = mapImage.width;
         canvas.height = mapImage.height;
-        ctx.drawImage(mapImage, 0, 0, canvas.clientWidth, canvas.clientHeight);
+        ctx.drawImage(mapImage, 0, 0);
       };
     </script>
   </body>

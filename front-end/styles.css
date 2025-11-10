@@ -5,6 +5,29 @@ body {
 .container {
   position: relative;
 }
+
+.selector-container {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+
+  row-gap: 0.5rem;
+}
+
+.loc-selector {
+  border: 1px solid #889198;
+  text-align: center;
+  background-color: #8a0028;
+  color: white;
+  padding: 0.5rem 0;
+  border-radius: 10px;
+  margin: 0 2rem;
+}
+
+.loc-selector option {
+  background-color: white;
+  color: black;
+}
 .drawer {
   position: absolute;
   top: 0;
