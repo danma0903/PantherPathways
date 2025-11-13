@@ -1,67 +1,74 @@
 body {
-  height: 500px;
+	height: 100vh;
+	margin: 0;
 }
 
 .container {
-  position: relative;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
 }
 
 .selector-container {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-
-  row-gap: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+	row-gap: 0.5rem;
 }
 
 .loc-selector {
-  border: 1px solid #889198;
-  text-align: center;
-  background-color: #8a0028;
-  color: white;
-  padding: 0.5rem 0;
-  border-radius: 10px;
-  margin: 0 2rem;
+	border: 1px solid #889198;
+	text-align: center;
+	background-color: #8a0028;
+	color: white;
+	padding: 0.5rem 0;
+	border-radius: 10px;
+	margin: 0 2rem;
 }
 
 .loc-selector option {
-  background-color: white;
-  color: black;
+	background-color: white;
+	color: black;
 }
 .drawer {
-  position: absolute;
+	/* no currently implemented as a drawer so styles are commented out */
+	/* position: absolute;
   top: 0;
-  left: 0;
-  height: 90%;
-  width: 300px;
+  left: 0; */
+	flex-grow: 1;
+	height: 100vh;
+	/* width: 20%; */
+	display: flex;
+	flex-direction: column;
 }
 .drawer-header {
-  background-color: #8a0028;
-  height: 7rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  padding-top: 1rem;
-  border-top: 3px black solid;
-  border-right: 3px black solid;
-  border-left: 3px black solid;
+	background-color: #8a0028;
+	height: 7rem;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 1rem;
+	border-top: 3px black solid;
+	border-right: 3px black solid;
+	border-left: 3px black solid;
 }
 
 .drawer-content {
-  background-color: #f8eded;
-  height: 300px;
-  width: 100%;
-  padding-left: 3px;
-  padding-right: 3px;
+	background-color: #f8eded;
+	padding-left: 3px;
+	padding-right: 3px;
+	flex-grow: 1;
 }
 
 #heading {
-  text-align: center;
-  font-weight: bold;
-  color: white;
+	text-align: center;
+	font-weight: bold;
+	color: white;
 }
-
+/* map styles */
 #scc-map {
-  height: 100%;
-  width: 100%;
+	height: 900px;
+	width: 1100px;
+	flex-grow: 4;
 }
