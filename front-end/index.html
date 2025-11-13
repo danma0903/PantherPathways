@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="drawer">
+        <header class="drawer-header">
+          <text id="heading">Panther Pathways</text>
+        </header>
+        <div class="drawer-content">
+          <div class="selector-container">
+            <select id="startLocSelector" class="loc-selector">
+              <option selected disabled hidden>
+                &#128204;Select Start Location
+              </option>
+              <option>hi friends</option>
+            </select>
+            <select id="endLocSelector" class="loc-selector">
+              <option selected disabled hidden>Select End Location</option>
+            </select>
+          </div>
+        </div>
+        <script>
+          //dynamically load locations into select tag
+          const startLocations = ["gym", "library"]; //list of strings
+          const endLocations = ["gym", "library", "bus"]; //list of strings
+
+          const startLocationSelector =
+            document.getElementById("startLocSelector");
+          const endLocationSelector = document.getElementById("endLocSelector");
+
+          startLocations.forEach((location) => {
+            addOptionToSelectTag(location, startLocationSelector);
+          });
+          endLocations.forEach((location) => {
+            addOptionToSelectTag(location, endLocationSelector);
+          });
+
+          function addOptionToSelectTag(option, parent) {
+            //accepts a string and creates an option tag
+            const newOptionElement = document.createElement("option");
+            newOptionElement.textContent = option;
+            parent.appendChild(newOptionElement);
+          }
+        </script>
+      </div>
+      <canvas id="scc-map"></canvas>
+    </div>
+    <script>
+      canvas = document.getElementById("scc-map");
+
+      ctx = canvas.getContext("2d");
+      ctx.imageSmoothingEnabled = false;
+
+      //AIIIIIII
+      canvas.addEventListener("click", function (event) {
+        const x = event.clientX;
+        const y = event.clientY; // calculate y coordinate inside canvas
+        console.log(`Clicked at: x=${x}, y=${y}`);
+      });
+      //AIIIIIII
+
+      const mapImage = new Image();
+      // const aspectRatio = mapImage.height / mapImage.width;
+
+      mapImage.src = "./map.png";
+
+      mapImage.onload = () => {
+        console.log(mapImage.height, mapImage.width);
+        //set the canvas width to the image width of the map
+        //this only needs to happen once as drawing nodes will not affect the map
+        canvas.width = mapImage.width;
+        canvas.height = mapImage.height;
+        ctx.drawImage(mapImage, 0, 0);
+        drawPath(points);
+      };
+
+      //maybe implement an entirely separate point class
+      //or object
+      const pixelNodes = {
+        a: [730, 700],
+        b: [610, 675],
+        c: [510, 1080],
+        d: [300, 1030],
+        e: [295, 1050],
+        f: [175, 1020],
+        g: [155, 1105],
+      };
+      const points = ["a", "b", "c", "d", "e", "f", "g"];
+      function drawPath(points) {
+        //accepts an array of sorted points as input. The points will be drawn in the order they appear
+        //in the array
+        // console.log(points);
+        // console.log(pixelNodes[points[0]]);
+        const iterator = points[Symbol.iterator]();
+        let point = iterator.next();
+
+        console.log(pixelNodes[point.value][0]);
+        ctx.moveTo(pixelNodes[point.value][0], pixelNodes[point.value][1]);
+
+        while (!point.done) {
+          ctx.lineTo(pixelNodes[point.value][0], pixelNodes[point.value][1]);
+          pixelNodes[point.value][0];
+          point = iterator.next();
+        }
+        console.log("lines connected");
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = "#0000ff";
+        ctx.stroke();
+      }
+    </script>
+  </body>
+</html>
