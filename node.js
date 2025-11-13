@@ -16,9 +16,35 @@ class graph {
     this.nodes[node.name] = node;
   }
 
-  deleteNode(nodeName) {
-    delete nodes.nodename;
-  }
+	deleteNode(nodeName) {
+		delete nodes.nodename;
+	}
+
+	getNeighborNodes(node) {
+		let neighborNodes = [];
+		for (let i = 0; i < node.edges.length; i++) {
+			if (node.edges[i].node1.getName() === node.getName() || node.edges[i].node2.getName() === node.getName()) {
+				neighborNodes.push(node.edges[i].getOppositeNode(node));
+				
+			}
+			else {
+				console.log("no");
+			}
+
+
+		}
+		return neighborNodes;
+
+
+
+
+		// for all edges of node
+		// if either node1 or node2 = this.node
+		// return getOppositeNode(this.node)
+
+		//}
+
+	}
 }
 
 class node {
@@ -53,19 +79,46 @@ class node {
 }
 
 class edge {
-  constructor(weight, node1, node2) {
-    this.weight = weight;
-    this.leftNode = node1;
-    this.rightNode = node2;
-  }
+	constructor(weight, node1, node2) {
+		this.weight = weight;
+		this.node1 = node1;
+		this.node2 = node2;
+	}
 
-  getNodes() {
-    //returns the names of the nodes the edge attaches
-    return [this.leftNode.getName(), this.rightNode.getName()];
-  }
-  getOppositeNode(node) {
-    return node.getName() === this.leftNode.getName()
-      ? this.rightNode
-      : this.leftNode;
-  }
+	getNodes() {
+		//returns the names of the nodes the edge attaches
+		return [this.leftNode.getName(), this.rightNode.getName()];
+	}
+	getOppositeNode(node) {
+
+		if (node.getName() != this.node1.getName() && node.getName() != this.node2.getName()) {
+			throw new Error("Invalid node");
+		}
+		return node.getName() === this.node1.getName() ? this.node2 : this.node1;
+	}
 }
+
+let nas = new node(5, 5,  "Natural Science Building");
+let RHN = new node(10, 10, "Rodda Hall North");
+let RHS = new node(15, 15, "Rodda Hall South");
+let library = new node(20, 20, "Library");
+
+let edge1 = new edge(15, nas, RHN);
+let edge2 = new edge(20, nas, RHS);
+let edge3 = new edge(25, library, nas);
+
+nas.addEdge(edge1);
+nas.addEdge(edge2);
+nas.addEdge(edge3);
+
+let graph1 = new graph();
+graph1.addNode(nas);
+graph1.addNode(RHN);
+graph1.addNode(RHS);
+graph1.addNode(library);
+
+const neighbors = graph1.getNeighborNodes(nas);
+for (neighbor of neighbors) {
+	console.log(neighbor.getName());
+}
+
