@@ -8,13 +8,13 @@
 
 //example change
 class graph {
-	constructor() {
-		this.nodes = [];
-	}
+  constructor() {
+    this.nodes = {};
+  }
 
-	addNode(node) {
-		this.nodes[node.name] = node;
-	}
+  addNode(node) {
+    this.nodes[node.name] = node;
+  }
 
 	deleteNode(nodeName) {
 		delete nodes.nodename;
@@ -48,34 +48,34 @@ class graph {
 }
 
 class node {
-	constructor(xCoord, yCoord, nodeName) {
-		this.xCoord = xCoord;
-		this.yCoord = yCoord;
-		this.name = nodeName;
-		this.edges = [];
-	}
+  constructor(xCoord, yCoord, nodeName) {
+    this.xCoord = xCoord;
+    this.yCoord = yCoord;
+    this.name = nodeName;
+    this.edges = [];
+  }
 
-	addEdge(edge) {
-		this.edges.push(edge);
-	}
-	getName() {
-		return this.name;
-	}
-	getDistanceTo(node) {
-		//should this function assume that all nodes being requested
-		//to are properly connected?
-		for (edge of this.edges) {
-			if (
-				edge.getNodes().includes(this.name) &&
-				edge.getNodes().includes(node.getName())
-			) {
-				return edge.weight;
-			} else {
-				continue;
-			}
-		}
-		return -1;
-	}
+  addEdge(edge) {
+    this.edges.push(edge);
+  }
+  getName() {
+    return this.name;
+  }
+  getDistanceTo(node) {
+    //should this function assume that all nodes being requested
+    //to are properly connected?
+    for (edge of this.edges) {
+      if (
+        edge.getNodes().includes(this.name) &&
+        edge.getNodes().includes(node.getName())
+      ) {
+        return edge.weight;
+      } else {
+        continue;
+      }
+    }
+    return -1;
+  }
 }
 
 class edge {
