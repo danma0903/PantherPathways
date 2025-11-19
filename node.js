@@ -9,15 +9,34 @@
 //example change
 class graph {
   constructor() {
-    this.nodes = {};
+    this.nodes = [];
+	this.numNodes = 0;
   }
 
-  addNode(node) {
-    this.nodes[node.name] = node;
+  createNode(xCoord, yCoord, nodeName) {
+	const newNode = new node(xCoord, yCoord, nodeName);
+	this.nodes.push(newNode);
+	this.numNodes += 1;
+	//console.log(this.nodes);
+	// Later implement test for duplicates
   }
 
 	deleteNode(nodeName) {
-		delete nodes.nodename;
+		
+		for (let i = 0; i < this.nodes.length; i++) {
+			if (this.nodes[i].getName() === nodeName) {
+				if (i === this.nodes.length - 1) {
+					this.nodes.pop();
+					this.numNodes -= 1;
+				} else {
+					console.log(this.nodes.length);
+					this.nodes[i] = this.nodes[this.nodes.length - 1];
+					this.nodes.pop();
+					this.numNodes -= 1;
+				}
+			}
+		}
+		
 	}
 
 	getNeighborNodes(node) {
@@ -98,27 +117,42 @@ class edge {
 	}
 }
 
-let nas = new node(5, 5,  "Natural Science Building");
-let RHN = new node(10, 10, "Rodda Hall North");
-let RHS = new node(15, 15, "Rodda Hall South");
-let library = new node(20, 20, "Library");
-
-let edge1 = new edge(15, nas, RHN);
-let edge2 = new edge(20, nas, RHS);
-let edge3 = new edge(25, library, nas);
-
-nas.addEdge(edge1);
-nas.addEdge(edge2);
-nas.addEdge(edge3);
-
 let graph1 = new graph();
-graph1.addNode(nas);
-graph1.addNode(RHN);
-graph1.addNode(RHS);
-graph1.addNode(library);
+graph1.createNode(5, 5, "test");
+graph1.createNode(5, 5, "test4");
+graph1.createNode(5, 5, "test3");
+graph1.createNode(5, 5, "test2");
+//console.log(graph1.nodes[0].getName());
 
-const neighbors = graph1.getNeighborNodes(nas);
-for (neighbor of neighbors) {
-	console.log(neighbor.getName());
-}
+console.log(graph1.nodes);
+graph1.deleteNode("test3");
+console.log(graph1.nodes);
+//console.log(graph1.nodes[2].getName());
+
+
+
+
+// let nas = new node(5, 5,  "Natural Science Building");
+// let RHN = new node(10, 10, "Rodda Hall North");
+// let RHS = new node(15, 15, "Rodda Hall South");
+// let library = new node(20, 20, "Library");
+
+// let edge1 = new edge(15, nas, RHN);
+// let edge2 = new edge(20, nas, RHS);
+// let edge3 = new edge(25, library, nas);
+
+// nas.addEdge(edge1);
+// nas.addEdge(edge2);
+// nas.addEdge(edge3);
+
+// let graph1 = new graph();
+// graph1.addNode(nas);
+// graph1.addNode(RHN);
+// graph1.addNode(RHS);
+// graph1.addNode(library);
+
+// const neighbors = graph1.getNeighborNodes(nas);
+// for (neighbor of neighbors) {
+// 	console.log(neighbor.getName());
+// }
 
