@@ -9,15 +9,53 @@
 //example change
 class graph {
   constructor() {
-    this.nodes = {};
+    this.nodes = [];
+	this.numNodes = 0;
   }
 
-  addNode(node) {
-    this.nodes[node.name] = node;
+  getNodes() {
+	return this.nodes;
+  }
+
+  getNode(nodeName) {
+	for (node of this.nodes) {
+		if (node.getName() === nodeName) {
+			return node;
+		}
+	}
+	throw new Error("Node not found!");
+  }
+
+  getDistanceBetween(node1Name, node2Name) {
+		const node1 = this.getNode(node1Name);
+		const node2 = this.getNode(node2Name);
+		return node1.getDistanceTo(node2);
+  }
+
+  createNode(xCoord, yCoord, nodeName) {
+	const newNode = new node(xCoord, yCoord, nodeName);
+	this.nodes.push(newNode);
+	this.numNodes += 1;
+	//console.log(this.nodes);
+	// Later implement test for duplicates
   }
 
 	deleteNode(nodeName) {
-		delete nodes.nodename;
+		
+		for (let i = 0; i < this.nodes.length; i++) {
+			if (this.nodes[i].getName() === nodeName) {
+				if (i === this.nodes.length - 1) {
+					this.nodes.pop();
+					this.numNodes -= 1;
+				} else {
+					console.log(this.nodes.length);
+					this.nodes[i] = this.nodes[this.nodes.length - 1];
+					this.nodes.pop();
+					this.numNodes -= 1;
+				}
+			}
+		}
+		
 	}
 
 	getNeighborNodes(node) {
@@ -45,7 +83,17 @@ class graph {
 		//}
 
 	}
+
+	addEdge(weight, node1Name, node2Name) {
+		const node1 = this.getNode(node1Name);
+		const node2 = this.getNode(node2Name);
+		const newEdge = new edge(weight, node1, node2);
+		node1.addEdge(newEdge);
+		node2.addEdge(newEdge);
+	}
 }
+
+
 
 class node {
   constructor(xCoord, yCoord, nodeName) {
@@ -87,7 +135,7 @@ class edge {
 
 	getNodes() {
 		//returns the names of the nodes the edge attaches
-		return [this.leftNode.getName(), this.rightNode.getName()];
+		return [this.node1.getName(), this.node2.getName()];
 	}
 	getOppositeNode(node) {
 
@@ -98,27 +146,94 @@ class edge {
 	}
 }
 
-let nas = new node(5, 5,  "Natural Science Building");
-let RHN = new node(10, 10, "Rodda Hall North");
-let RHS = new node(15, 15, "Rodda Hall South");
-let library = new node(20, 20, "Library");
+function Dijkstras(graph, sourceNodeName) {
+	let queue = [];
+	let prev = {};
+	let dists = {};
 
-let edge1 = new edge(15, nas, RHN);
-let edge2 = new edge(20, nas, RHS);
-let edge3 = new edge(25, library, nas);
 
-nas.addEdge(edge1);
-nas.addEdge(edge2);
-nas.addEdge(edge3);
+	for (const node of graph.getNodes()) {
+		dists[node.getName()] = Infinity;
+		prev[node.getName()] = null;
+	}
+
+	dists[sourceNodeName] = 0;
+	queue.push([0, graph.getNode(sourceNodeName)]);
+
+	//  queue.push([1, "abc"]);
+	// queue.push([5, "blabhba"]);
+	// queue.push([3, "testing333"]);
+	// queue.push([8, "fdsfsdfdd"]);
+	// queue.sort((b, a) => a[0] - b[0]);
+	// queue.pop()
+	// console.log("Sorted queue: ", queue);
+
+	 while (queue.length > 0) {
+	 	queue.sort((a, b) => {a[0] - b[0]});
+		const [currentDist, currentNode] = queue.pop();
+		if (currentDist > dists[currentNode.getName()]) {
+			continue;
+		}
+		const currentNodeNeighbors = graph.getNeighborNodes(currentNode);
+		for (neighbor of currentNodeNeighbors) {
+			const weight = graph.getDistanceBetween(currentNode.getName(), neighbor.getName());
+			const newDist = dists[currentNode.getName()] + weight;
+			if (newDist < dists[neighbor.getName()]) {
+				dists[neighbor.getName()] = newDist;
+				prev[neighbor.getName()] = currentNode.getName();
+				queue.push([newDist, neighbor]);
+			}
+		}
+	 }
+
+	 return [dists, prev];
+
+}
 
 let graph1 = new graph();
-graph1.addNode(nas);
-graph1.addNode(RHN);
-graph1.addNode(RHS);
-graph1.addNode(library);
+graph1.createNode(5, 5, "0");
+graph1.createNode(5, 5, "1");
+graph1.createNode(5, 5, "2");
+graph1.createNode(5, 5, "3");
+graph1.createNode(5, 5, "4");
+graph1.addEdge(1, "0", "1");
+graph1.addEdge(2, "0", "2");
+graph1.addEdge(5, "0", "3");
+graph1.addEdge(3, "1", "4");
+graph1.addEdge(1, "2", "4");
+graph1.addEdge(1, "3", "4");
+//console.log(graph1.nodes[0].getName());
+console.log(Dijkstras(graph1, "0"));
 
-const neighbors = graph1.getNeighborNodes(nas);
-for (neighbor of neighbors) {
-	console.log(neighbor.getName());
-}
+
+
+
+//console.log(graph1.nodes[2].getName());
+
+
+
+
+// let nas = new node(5, 5,  "Natural Science Building");
+// let RHN = new node(10, 10, "Rodda Hall North");
+// let RHS = new node(15, 15, "Rodda Hall South");
+// let library = new node(20, 20, "Library");
+
+// let edge1 = new edge(15, nas, RHN);
+// let edge2 = new edge(20, nas, RHS);
+// let edge3 = new edge(25, library, nas);
+
+// nas.addEdge(edge1);
+// nas.addEdge(edge2);
+// nas.addEdge(edge3);
+
+// let graph1 = new graph();
+// graph1.addNode(nas);
+// graph1.addNode(RHN);
+// graph1.addNode(RHS);
+// graph1.addNode(library);
+
+// const neighbors = graph1.getNeighborNodes(nas);
+// for (neighbor of neighbors) {
+// 	console.log(neighbor.getName());
+// }
 
