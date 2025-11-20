@@ -1,0 +1,71 @@
+{
+	"nodes": [
+		{
+			"name": "0",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			}
+		},
+		{
+			"name": "1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			}
+		},
+		{
+			"name": "2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			}
+		},
+		{
+			"name": "3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			}
+		},
+		{
+			"name": "4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			}
+		}
+	],
+	"edges": [
+		{
+			"from": "0",
+			"to": "1",
+			"weight": 1
+		},
+		{
+			"from": "0",
+			"to": "2",
+			"weight": 2
+		},
+		{
+			"from": "0",
+			"to": "3",
+			"weight": 5
+		},
+		{
+			"from": "1",
+			"to": "4",
+			"weight": 3
+		},
+		{
+			"from": "2",
+			"to": "4",
+			"weight": 1
+		},
+		{
+			"from": "3",
+			"to": "4",
+			"weight": 1
+		}
+	]
+}
