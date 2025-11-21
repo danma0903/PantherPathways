@@ -5,22 +5,15 @@
 //if every node conntains the edges to all of its adjacent nodes
 //then we end up with duplicate vavlues being stored whereas
 //if we use an adjacency matrix we only need one source of truth
-function loadNodes() {
-	console.log("bad");
-	const nodes = fetch("/front-end/data.json").then((response) =>
-		response.json()
-	);
-	console.log("success");
-	console.log(nodes);
-}
-console.log("ss");
-loadNodes();
 
 //example change
+
+//rename node to graphNode and change line 37 to reference graphNode instead of node
 class graph {
 	constructor() {
 		this.nodes = [];
 		this.numNodes = 0;
+		this.edges = [];
 	}
 
 	getNodes() {
@@ -28,9 +21,9 @@ class graph {
 	}
 
 	getNode(nodeName) {
-		for (node of this.nodes) {
-			if (node.getName() === nodeName) {
-				return node;
+		for (const curr_node of this.nodes) {
+			if (curr_node.getName() === nodeName) {
+				return curr_node;
 			}
 		}
 		throw new Error("Node not found!");
@@ -43,7 +36,7 @@ class graph {
 	}
 
 	createNode(xCoord, yCoord, nodeName) {
-		const newNode = new node(xCoord, yCoord, nodeName);
+		const newNode = new graphNode(xCoord, yCoord, nodeName);
 		this.nodes.push(newNode);
 		this.numNodes += 1;
 		//console.log(this.nodes);
@@ -90,13 +83,17 @@ class graph {
 	addEdge(weight, node1Name, node2Name) {
 		const node1 = this.getNode(node1Name);
 		const node2 = this.getNode(node2Name);
-		const newEdge = new edge(weight, node1, node2);
+		const newEdge = new graphEdge(weight, node1, node2);
 		node1.addEdge(newEdge);
 		node2.addEdge(newEdge);
+		this.edges.push(newEdge);
+	}
+	getEdges() {
+		return this.edges;
 	}
 }
 
-class node {
+class graphNode {
 	constructor(xCoord, yCoord, nodeName) {
 		this.xCoord = xCoord;
 		this.yCoord = yCoord;
@@ -113,7 +110,7 @@ class node {
 	getDistanceTo(node) {
 		//should this function assume that all nodes being requested
 		//to are properly connected?
-		for (edge of this.edges) {
+		for (const edge of this.edges) {
 			if (
 				edge.getNodes().includes(this.name) &&
 				edge.getNodes().includes(node.getName())
@@ -127,7 +124,7 @@ class node {
 	}
 }
 
-class edge {
+class graphEdge {
 	constructor(weight, node1, node2) {
 		this.weight = weight;
 		this.node1 = node1;
@@ -197,19 +194,57 @@ function Dijkstras(graph, sourceNodeName) {
 }
 
 let graph1 = new graph();
-graph1.createNode(5, 5, "0");
-graph1.createNode(5, 5, "1");
-graph1.createNode(5, 5, "2");
-graph1.createNode(5, 5, "3");
-graph1.createNode(5, 5, "4");
-graph1.addEdge(1, "0", "1");
-graph1.addEdge(2, "0", "2");
-graph1.addEdge(5, "0", "3");
-graph1.addEdge(3, "1", "4");
-graph1.addEdge(1, "2", "4");
-graph1.addEdge(1, "3", "4");
-//console.log(graph1.nodes[0].getName());
-console.log(Dijkstras(graph1, "0"));
+async function loadNodes(graph) {
+	const nodes = await fetch("/front-end/data.json").then((response) =>
+		response.json()
+	);
+	for (curr_node of nodes.nodes) {
+		graph.createNode(
+			curr_node.coordinates.x,
+			curr_node.coordinates.y,
+			curr_node.name
+		);
+	}
+}
+
+async function loadEdges(graph) {
+	const edges = await fetch("/front-end/data.json").then((response) =>
+		response.json()
+	);
+
+	for (curr_edge of edges.edges) {
+		graph.addEdge(curr_edge.weight, curr_edge.from, curr_edge.to);
+	}
+}
+
+async function loadGraph(graph) {
+	await loadNodes(graph);
+	await loadEdges(graph);
+
+	console.log(Dijkstras(graph1, "0"));
+}
+
+console.log(graph1.getNodes());
+console.log(graph1.getEdges());
+loadGraph(graph1);
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+// console.log(Dijkstras(graph1, "0"));
 
 //console.log(graph1.nodes[2].getName());
 
