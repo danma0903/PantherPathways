@@ -1035,6 +1035,28 @@
 				"x": 476,
 				"y": 855
 			}
+		},
+		{
+			"name": "PAN",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 1010,
+				"y": 903
+			}
+		},
+		{
+			"name": "PAN1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 997,
+				"y": 846
+			}
 		}
 	],
 	"edges": [
@@ -1662,6 +1684,21 @@
 			"from": "RAND",
 			"to": "CC2",
 			"weight": 52
+		},
+		{
+			"from": "PAN1",
+			"to": "PAN",
+			"weight": 69
+		},
+		{
+			"from": "PAN1",
+			"to": "UNS2",
+			"weight": 213
+		},
+		{
+			"from": "PAN1",
+			"to": "CDC3",
+			"weight": 194
 		}
 	]
 }
