@@ -165,7 +165,7 @@ function Dijkstras(graph, sourceNodeName) {
 	// queue.push([8, "fdsfsdfdd"]);
 	// queue.sort((b, a) => a[0] - b[0]);
 	// queue.pop()
-	// console.log("Sorted queue: ", queue);
+	 //console.log("Sorted queue: ", queue);
 
 	while (queue.length > 0) {
 		queue.sort((a, b) => {
@@ -194,7 +194,7 @@ function Dijkstras(graph, sourceNodeName) {
 }
 
 let graph1 = new graph();
-async function loadNodes(graph) {
+async function loadGraph(graph) {
 	const nodes = await fetch("/front-end/data.json").then((response) =>
 		response.json()
 	);
@@ -205,24 +205,13 @@ async function loadNodes(graph) {
 			curr_node.name
 		);
 	}
-}
-
-async function loadEdges(graph) {
-	const edges = await fetch("/front-end/data.json").then((response) =>
-		response.json()
-	);
-
-	for (curr_edge of edges.edges) {
+		for (curr_edge of nodes.edges) {
 		graph.addEdge(curr_edge.weight, curr_edge.from, curr_edge.to);
 	}
+		console.log(Dijkstras(graph1, "B-LOT1"));
 }
 
-async function loadGraph(graph) {
-	await loadNodes(graph);
-	await loadEdges(graph);
 
-	console.log(Dijkstras(graph1, "0"));
-}
 
 console.log(graph1.getNodes());
 console.log(graph1.getEdges());

@@ -1019,34 +1019,15 @@
 	],
 	"edges": [
 		{
-			"from": "0",
-			"to": "1",
-			"weight": 1
-		},
-		{
-			"from": "0",
-			"to": "2",
-			"weight": 2
-		},
-		{
-			"from": "0",
-			"to": "3",
+			"from": "B-LOT1",
+			"to": "B-LOT2",
 			"weight": 5
 		},
 		{
-			"from": "1",
-			"to": "4",
-			"weight": 3
-		},
-		{
-			"from": "2",
-			"to": "4",
-			"weight": 1
-		},
-		{
-			"from": "3",
-			"to": "4",
-			"weight": 1
+			"from": "B-LOT2",
+			"to": "B-LOT3",
+			"weight": 4
 		}
+
 	]
 }
