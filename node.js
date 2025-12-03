@@ -227,6 +227,27 @@ async function loadGraph(graph) {
 console.log(graph1.getNodes());
 console.log(graph1.getEdges());
 loadGraph(graph1);
+const PathfindingAPI = {
+	async initialize() {
+		if (graph1.numNodes === 0) {
+			await loadGraph(graph1);
+		}
+	},
+
+	findPath(startNode, endNode) {
+		if (startNode === endNode) {
+			return [startNode]; // or return [] if you want no path
+		}
+		const [dists, prev] = Dijkstras(graph1, startNode);
+		const path = [];
+		let current = endNode;
+		while (current !== null) {
+			path.unshift(current);
+			current = prev[current];
+		}
+		return path;
+	},
+};
 
 //
 

@@ -30,6 +30,7 @@
         </div>
       </div>
       <script>
+
         //dynamically load locations into select tag
         const startLocations = ["gym", "library"]; //list of strings
         const endLocations = ["gym", "library", "bus"]; //list of strings
@@ -51,6 +52,17 @@
           newOptionElement.textContent = option;
           parent.appendChild(newOptionElement);
         }
+
+        PathfindingAPI.initialize().then(() => {
+          // Add event listeners here
+          startLocationSelector.addEventListener("change", (event) => {
+            startLocation = event.target.value;
+            if (startLocation && endLocation) {
+              const path = PathfindingAPI.findPath(startLocation, endLocation);
+              drawPath(path);
+            }
+          });
+        });
       </script>
     </div>
     <canvas id="scc-map"></canvas>
