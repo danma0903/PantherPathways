@@ -1,44 +1,1021 @@
 {
 	"nodes": [
 		{
-			"name": "0",
+			"name": "MOH",
 			"coordinates": {
 				"x": 50,
 				"y": 40
 			},
 			"pixelCoord": {
-				"x": 40,
-				"y": 40
+				"x": 330,
+				"y": 1375
 			}
 		},
 		{
-			"name": "1",
+			"name": "MOH-1",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 383,
+				"y": 1375
 			}
 		},
 		{
-			"name": "2",
+			"name": "NAS",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 432,
+				"y": 1322
 			}
 		},
 		{
-			"name": "3",
+			"name": "NAS-1",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 432,
+				"y": 1315
 			}
 		},
 		{
-			"name": "4",
+			"name": "NAS-2",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 395,
+				"y": 1315
+			}
+		},
+		{
+			"name": "NAS-3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 383,
+				"y": 1315
+			}
+		},
+		{
+			"name": "G-Lot1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 395,
+				"y": 1170
+			}
+		},
+		{
+			"name": "C-Lot1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1170
+			}
+		},
+		{
+			"name": "LRC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 485,
+				"y": 1050
+			}
+		},
+		{
+			"name": "LRC-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 540,
+				"y": 1050
+			}
+		},
+		{
+			"name": "LRC-2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1050
+			}
+		},
+		{
+			"name": "LRC-3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1133
+			}
+		},
+		{
+			"name": "BUS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 652,
+				"y": 1066
+			}
+		},
+		{
+			"name": "BUS-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1068
+			}
+		},
+		{
+			"name": "B-LOT1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 1126
+			}
+		},
+		{
+			"name": "B-LOT2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 1066
+			}
+		},
+		{
+			"name": "B-LOT3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 984
+			}
+		},
+		{
+			"name": "B-LOT4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 934
+			}
+		},
+
+		{
+			"name": "SOG",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 652,
+				"y": 984
+			}
+		},		{
+			"name": "SOG-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 557,
+				"y": 984
+			}
+		},
+
+		{
+			"name": "STC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 652,
+				"y": 934
+			}
+		},
+				{
+			"name": "STC-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 557,
+				"y": 934
+			}
+		},
+				{
+			"name": "STC-2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 557,
+				"y": 962
+			}
+		},
+		{
+			"name": "B-LOT5",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 863
+			}
+		},
+				{
+			"name": "RHS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 368,
+				"y": 1037
+			}
+		},
+				{
+			"name": "RHS-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 403,
+				"y": 1037
+			}
+		},
+				{
+			"name": "RHS-2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 403,
+				"y": 1054
+			}
+		},
+				{
+			"name": "CC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 401,
+				"y": 930
+			}
+		},
+				{
+			"name": "CC-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 470,
+				"y": 930
+			}
+		},
+				{
+			"name": "CC-2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 540,
+				"y": 930
+			}
+		},
+				{
+			"name": "CC-3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 540,
+				"y": 960
+			}
+		},
+				{
+			"name": "CC-4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 512,
+				"y": 991
+			}
+		},
+				{
+			"name": "CC-5",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 466,
+				"y": 944
+			}
+		},
+				{
+			"name": "CC-6",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 477,
+				"y": 996
+			}
+		},
+				{
+			"name": "CC-7",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 434,
+				"y": 989
+			}
+		},
+				{
+			"name": "RHN",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 368,
+				"y": 826
+			}
+		},
+				{
+			"name": "RHN-1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 385,
+				"y": 826
+			}
+		},
+				{
+			"name": "RHN-2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 401,
+				"y": 826
+			}
+		},
+				{
+			"name": "RHN-3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 441,
+				"y": 803
+			}
+		},
+				{
+			"name": "RHN-4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 470,
+				"y": 774
+			}
+		},
+				{
+			"name": "QUAD1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 385,
+				"y": 730
+			}
+		},
+				{
+			"name": "QUAD2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 472,
+				"y": 730
+			}
+		},
+				{
+			"name": "QUAD3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 554,
+				"y": 730
+			}
+		},
+				{
+			"name": "QUAD4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 605,
+				"y": 730
+			}
+		},
+						{
+			"name": "QUAD5",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 660,
+				"y": 730
+			}
+		},
+						{
+			"name": "QUAD6",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 719,
+				"y": 730
+			}
+		},
+						{
+			"name": "QUAD7",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 810,
+				"y": 730
+			}
+		},
+						{
+			"name": "QUADUP",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 385,
+				"y": 700
+			}
+		},
+						{
+			"name": "HLOT",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 349,
+				"y": 700
+			}
+		},
+						{
+			"name": "STS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 349,
+				"y": 585
+			}
+		},
+						{
+			"name": "STS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 330,
+				"y": 585
+			}
+		},
+						{
+			"name": "STS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 330,
+				"y": 595
+			}
+		},
+						{
+			"name": "SHW",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 268,
+				"y": 585
+			}
+		},
+						{
+			"name": "COS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 317,
+				"y": 517
+			}
+		},
+						{
+			"name": "COS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 317,
+				"y": 537
+			}
+		},
+						{
+			"name": "COS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 330,
+				"y": 537
+			}
+		},
+						{
+			"name": "TEC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 421,
+				"y": 514
+			}
+		},
+						{
+			"name": "TEC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 421,
+				"y": 537
+			}
+		},
+						{
+			"name": "PAC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 472,
+				"y": 661
+			}
+		},
+								{
+			"name": "PAC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 472,
+				"y": 694
+			}
+		},
+										{
+			"name": "CIC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 546,
+				"y": 805
+			}
+		},
+										{
+			"name": "CIC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 546,
+				"y": 781
+			}
+		},
+										{
+			"name": "NOG",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 661,
+				"y": 783
+			}
+		},
+										{
+			"name": "NOG1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 661,
+				"y": 755
+			}
+		},
+										{
+			"name": "HSP",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 754,
+				"y": 779
+			}
+		},
+										{
+			"name": "HSP1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 717,
+				"y": 759
+			}
+		},
+										{
+			"name": "UNS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 819,
+				"y": 872
+			}
+		},
+												{
+			"name": "UNS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 819,
+				"y": 851
+			}
+		},
+												{
+			"name": "UNS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 859,
+				"y": 851
+			}
+		},
+												{
+			"name": "CDC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 885,
+				"y": 786
+			}
+		},
+												{
+			"name": "CDC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 885,
+				"y": 766
+			}
+		},
+												{
+			"name": "CDC2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 845,
+				"y": 766
+			}
+		},
+												{
+			"name": "CDC3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 890,
+				"y": 730
+			}
+		},
+												{
+			"name": "LUC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 719,
+				"y": 671
+			}
+		},
+												{
+			"name": "LUC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 719,
+				"y": 690
+			}
+		},
+												{
+			"name": "LUC3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 759,
+				"y": 567
+			}
+		},
+												{
+			"name": "LUC4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 759,
+				"y": 591
+			}
+		},
+												{
+			"name": "FFA",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 619,
+				"y": 675
+			}
+		},
+												{
+			"name": "FFA1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 605,
+				"y": 675
+			}
+		},
+												{
+			"name": "FFA2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 605,
+				"y": 690
+			}
+		},
+												{
+			"name": "FFA3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 585,
+				"y": 690
+			}
+		},
+												{
+			"name": "FFA4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 555,
+				"y": 690
+			}
+		},
+												{
+			"name": "DCA",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 563,
+				"y": 601
+			}
+		},
+												{
+			"name": "DCA1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 583,
+				"y": 601
+			}
+		},
+												{
+			"name": "ACT",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 563,
+				"y": 560
+			}
+		},
+												{
+			"name": "MAK",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 812,
+				"y": 505
+			}
+		},
+												{
+			"name": "WESTLOT",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 881,
+				"y": 567
+			}
+		},
+												{
+			"name": "WESTLOT1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 801,
+				"y": 592
+			}
+		},
+												{
+			"name": "PAS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 1039,
+				"y": 434
+			}
+		},
+												{
+			"name": "PAS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 948,
+				"y": 469
+			}
+		},
+												{
+			"name": "PAS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 948,
+				"y": 527
 			}
 		}
+
+		
+		
+		
+		
+		
+		
+
+
+		
+
+
+
+		
 	],
 	"edges": [
 		{

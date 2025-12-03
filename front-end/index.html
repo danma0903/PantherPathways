@@ -30,7 +30,24 @@
         </div>
       </div>
       <script>
+        async function loadMapNodes() {
+          const data = await fetch("./data.json").then((response => response.json()));
+         const pixelNodes = {};
+         data.nodes.forEach(node => {
+        pixelNodes[node.name] = {
+          x: node.pixelCoord.x,
+          y: node.pixelCoord.y
+        };
+    });
+
+    return pixelNodes;
+
+        }
+    let pixelNodes = {};
+
+
         //dynamically load locations into select tag
+
         const startLocations = ["gym", "library"]; //list of strings
         const endLocations = ["gym", "library", "bus"]; //list of strings
 
@@ -87,21 +104,22 @@
       canvas.width = mapImage.width;
       canvas.height = mapImage.height;
       ctx.drawImage(mapImage, 0, 0);
-      drawPath(points);
+      loadMapNodes().then(data => {
+        pixelNodes = data;
+        console.log("PixelNodes: ", pixelNodes);
+        drawPath(points);
+    }
+    )
+
+
     };
 
     //maybe implement an entirely separate point class
     //or object
-    const pixelNodes = {
-      a: [730, 700],
-      b: [610, 675],
-      c: [510, 1080],
-      d: [300, 1030],
-      e: [295, 1050],
-      f: [175, 1020],
-      g: [155, 1105],
-    };
-    const points = ["a", "b", "c", "d", "e", "f", "g"];
+
+
+
+    const points = ["PAS", "PAS1", "PAS2", "WESTLOT", "WESTLOT1", "QUAD7", "QUAD6", "QUAD5", "NOG1", "NOG"];
     function drawPath(points) {
       //accepts an array of sorted points as input. The points will be drawn in the order they appear
       //in the array
@@ -110,12 +128,16 @@
       const iterator = points[Symbol.iterator]();
       let point = iterator.next();
 
-      console.log(pixelNodes[point.value][0]);
-      ctx.moveTo(pixelNodes[point.value][0], pixelNodes[point.value][1]);
+      console.log("test");
+      // console.log(pixelNodes);
+
+      // console.log(point.value);
+      console.log(pixelNodes[point.value].x);
+      ctx.moveTo(pixelNodes[point.value].x, pixelNodes[point.value].y);
 
       while (!point.done) {
-        ctx.lineTo(pixelNodes[point.value][0], pixelNodes[point.value][1]);
-        pixelNodes[point.value][0];
+        ctx.lineTo(pixelNodes[point.value].x, pixelNodes[point.value].y);
+        pixelNodes[point.value];
         point = iterator.next();
       }
       console.log("lines connected");
