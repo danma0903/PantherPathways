@@ -63,9 +63,15 @@
 
     //AIIIIIII
     canvas.addEventListener("click", function (event) {
-      const x = event.clientX;
-      const y = event.clientY; // calculate y coordinate inside canvas
-      console.log(`Clicked at: x=${x}, y=${y}`);
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width / rect.width;
+      const scaleY = canvas.height / rect.height;
+
+      const x = Math.round((event.clientX - rect.left) * scaleX);
+      const y = Math.round((event.clientY - rect.top) * scaleY);
+
+      console.log(`"nodeName": [${x}, ${y}],`);
+      // Copy-paste directly into your pixelNodes object!
     });
     //AIIIIIII
 

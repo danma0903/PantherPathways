@@ -5,6 +5,10 @@
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 40,
+				"y": 40
 			}
 		},
 		{
