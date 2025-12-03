@@ -68,7 +68,7 @@ body {
 }
 /* map styles */
 #scc-map {
-	height: 900px;
-	width: 1100px;
+	height: 435px;
+	width: 500px;
 	flex-grow: 4;
 }

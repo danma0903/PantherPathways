@@ -32,24 +32,25 @@
       <script>
         async function loadMapNodes() {
           const data = await fetch("./data.json").then((response => response.json()));
-         const pixelNodes = {};
-         data.nodes.forEach(node => {
-        pixelNodes[node.name] = {
-          x: node.pixelCoord.x,
-          y: node.pixelCoord.y
-        };
-    });
+          const pixelNodes = {};
+          data.nodes.forEach(node => {
+            pixelNodes[node.name] = {
+              x: node.pixelCoord.x,
+              y: node.pixelCoord.y
+            };
+          });
 
-    return pixelNodes;
+          return pixelNodes;
 
         }
-    let pixelNodes = {};
+        let pixelNodes = {};
+
 
 
         //dynamically load locations into select tag
 
-        const startLocations = ["gym", "library"]; //list of strings
-        const endLocations = ["gym", "library", "bus"]; //list of strings
+        const startLocations = ["HSP", "LRC", "NAS", "TEC", "PAC", "MAK", "CDC", "NOG", "FFA", "RHS", "RHN", "PAS", "SHW", "COS", "MOH", "PAN","LUC"]; //list of strings
+        const endLocations = ["HSP", "LRC", "NAS", "TEC", "PAC", "MAK", "CDC", "NOG", "FFA", "RHS", "RHN", "PAS", "SHW", "COS", "MOH", "PAN","LUC"]; //list of strings
 
         const startLocationSelector =
           document.getElementById("startLocSelector");
@@ -68,6 +69,34 @@
           newOptionElement.textContent = option;
           parent.appendChild(newOptionElement);
         }
+
+        let startLocation = null;
+        let endLocation = null;
+
+
+
+        PathfindingAPI.initialize().then(() => {
+          // Add event listeners here
+          endLocationSelector.addEventListener("change", (event) => {
+            endLocation = event.target.value;
+
+                        if (startLocation && endLocation) {
+              const path = PathfindingAPI.findPath(startLocation, endLocation);
+             
+              drawPath(path);
+            }
+          });
+          startLocationSelector.addEventListener("change", (event) => {
+            startLocation = event.target.value;
+
+            if (startLocation && endLocation) {
+              const path = PathfindingAPI.findPath(startLocation, endLocation);
+              
+              drawPath(path);
+
+            }
+          });
+        });
       </script>
     </div>
     <canvas id="scc-map"></canvas>
@@ -103,13 +132,13 @@
       //this only needs to happen once as drawing nodes will not affect the map
       canvas.width = mapImage.width;
       canvas.height = mapImage.height;
-      ctx.drawImage(mapImage, 0, 0);
+       ctx.drawImage(mapImage, 0, 0);
       loadMapNodes().then(data => {
         pixelNodes = data;
         console.log("PixelNodes: ", pixelNodes);
-        drawPath(points);
-    }
-    )
+        // drawPath(points);
+      }
+      )
 
 
     };
@@ -121,6 +150,11 @@
 
     const points = ["PAS", "PAS1", "PAS2", "WESTLOT", "WESTLOT1", "QUAD7", "QUAD6", "QUAD5", "NOG1", "NOG"];
     function drawPath(points) {
+      ctx.clearRect(0,0, canvas.width, canvas.height);
+      ctx.drawImage(mapImage, 0, 0);
+      ctx.beginPath();
+
+      
       //accepts an array of sorted points as input. The points will be drawn in the order they appear
       //in the array
       // console.log(points);
