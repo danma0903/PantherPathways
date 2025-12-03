@@ -194,60 +194,47 @@ function Dijkstras(graph, sourceNodeName) {
 }
 
 let graph1 = new graph();
-async function loadNodes(graph) {
+async function loadGraph(graph) {
 	const nodes = await fetch("/front-end/data.json").then((response) =>
 		response.json()
 	);
-	for (curr_node of nodes.nodes) {
+	for (const curr_node of nodes.nodes) {
 		graph.createNode(
 			curr_node.coordinates.x,
 			curr_node.coordinates.y,
 			curr_node.name
 		);
 	}
-}
 
-async function loadEdges(graph) {
-	const edges = await fetch("/front-end/data.json").then((response) =>
-		response.json()
-	);
-
-	for (curr_edge of edges.edges) {
+	for (const curr_edge of nodes.edges) {
 		graph.addEdge(curr_edge.weight, curr_edge.from, curr_edge.to);
 	}
+
+	console.log(Dijkstras(graph1, "MOH"));
 }
 
-async function loadGraph(graph) {
-	await loadNodes(graph);
-	await loadEdges(graph);
-
-	console.log(Dijkstras(graph1, "0"));
-}
-
-console.log(graph1.getNodes());
-console.log(graph1.getEdges());
 loadGraph(graph1);
-const PathfindingAPI = {
-	async initialize() {
-		if (graph1.numNodes === 0) {
-			await loadGraph(graph1);
-		}
-	},
+// const PathfindingAPI = {
+// 	async initialize() {
+// 		if (graph1.numNodes === 0) {
+// 			await loadGraph(graph1);
+// 		}
+// 	},
 
-	findPath(startNode, endNode) {
-		if (startNode === endNode) {
-			return [startNode]; // or return [] if you want no path
-		}
-		const [dists, prev] = Dijkstras(graph1, startNode);
-		const path = [];
-		let current = endNode;
-		while (current !== null) {
-			path.unshift(current);
-			current = prev[current];
-		}
-		return path;
-	},
-};
+// 	findPath(startNode, endNode) {
+// 		if (startNode === endNode) {
+// 			return [startNode]; // or return [] if you want no path
+// 		}
+// 		const [dists, prev] = Dijkstras(graph1, startNode);
+// 		const path = [];
+// 		let current = endNode;
+// 		while (current !== null) {
+// 			path.unshift(current);
+// 			current = prev[current];
+// 		}
+// 		return path;
+// 	},
+// };
 
 //
 

@@ -1,75 +1,1667 @@
 {
 	"nodes": [
 		{
-			"name": "0",
+			"name": "MOH",
 			"coordinates": {
 				"x": 50,
 				"y": 40
 			},
 			"pixelCoord": {
-				"x": 40,
-				"y": 40
+				"x": 330,
+				"y": 1375
 			}
 		},
 		{
-			"name": "1",
+			"name": "MOH1",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 383,
+				"y": 1375
 			}
 		},
 		{
-			"name": "2",
+			"name": "NAS",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 432,
+				"y": 1322
 			}
 		},
 		{
-			"name": "3",
+			"name": "NAS1",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 432,
+				"y": 1315
 			}
 		},
 		{
-			"name": "4",
+			"name": "NAS2",
 			"coordinates": {
 				"x": 50,
 				"y": 40
+			},
+			"pixelCoord": {
+				"x": 395,
+				"y": 1315
+			}
+		},
+		{
+			"name": "NAS3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 383,
+				"y": 1315
+			}
+		},
+		{
+			"name": "GLOT1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 395,
+				"y": 1170
+			}
+		},
+		{
+			"name": "CLOT1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1170
+			}
+		},
+		{
+			"name": "LRC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 485,
+				"y": 1050
+			}
+		},
+		{
+			"name": "LRC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 540,
+				"y": 1050
+			}
+		},
+		{
+			"name": "LRC2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1050
+			}
+		},
+		{
+			"name": "LRC3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1133
+			}
+		},
+		{
+			"name": "BUS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 652,
+				"y": 1066
+			}
+		},
+		{
+			"name": "BUS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 560,
+				"y": 1068
+			}
+		},
+		{
+			"name": "BLOT1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 1126
+			}
+		},
+		{
+			"name": "BLOT2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 1066
+			}
+		},
+		{
+			"name": "BLOT3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 984
+			}
+		},
+		{
+			"name": "BLOT4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 934
+			}
+		},
+
+		{
+			"name": "SOG",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 652,
+				"y": 984
+			}
+		},
+		{
+			"name": "SOG1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 557,
+				"y": 984
+			}
+		},
+
+		{
+			"name": "STC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 652,
+				"y": 934
+			}
+		},
+		{
+			"name": "STC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 557,
+				"y": 934
+			}
+		},
+		{
+			"name": "STC2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 557,
+				"y": 962
+			}
+		},
+		{
+			"name": "BLOT5",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 721,
+				"y": 863
+			}
+		},
+		{
+			"name": "RHS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 368,
+				"y": 1037
+			}
+		},
+		{
+			"name": "RHS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 403,
+				"y": 1037
+			}
+		},
+		{
+			"name": "RHS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 403,
+				"y": 1054
+			}
+		},
+		{
+			"name": "CC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 401,
+				"y": 930
+			}
+		},
+		{
+			"name": "CC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 470,
+				"y": 930
+			}
+		},
+		{
+			"name": "CC2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 540,
+				"y": 930
+			}
+		},
+		{
+			"name": "CC3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 540,
+				"y": 960
+			}
+		},
+		{
+			"name": "CC4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 512,
+				"y": 991
+			}
+		},
+		{
+			"name": "CC5",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 466,
+				"y": 944
+			}
+		},
+		{
+			"name": "CC6",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 477,
+				"y": 996
+			}
+		},
+		{
+			"name": "CC7",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 434,
+				"y": 989
+			}
+		},
+		{
+			"name": "RHN",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 368,
+				"y": 826
+			}
+		},
+		{
+			"name": "RHN1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 385,
+				"y": 826
+			}
+		},
+		{
+			"name": "RHN2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 401,
+				"y": 826
+			}
+		},
+		{
+			"name": "RHN3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 441,
+				"y": 803
+			}
+		},
+		{
+			"name": "RHN4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 470,
+				"y": 774
+			}
+		},
+		{
+			"name": "QUAD1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 385,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUAD2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 472,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUAD3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 554,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUAD4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 605,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUAD5",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 660,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUAD6",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 719,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUAD7",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 810,
+				"y": 730
+			}
+		},
+		{
+			"name": "QUADUP",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 385,
+				"y": 700
+			}
+		},
+		{
+			"name": "HLOT",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 349,
+				"y": 700
+			}
+		},
+		{
+			"name": "STS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 349,
+				"y": 585
+			}
+		},
+		{
+			"name": "STS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 330,
+				"y": 585
+			}
+		},
+		{
+			"name": "STS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 330,
+				"y": 595
+			}
+		},
+		{
+			"name": "SHW",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 268,
+				"y": 585
+			}
+		},
+		{
+			"name": "COS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 317,
+				"y": 517
+			}
+		},
+		{
+			"name": "COS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 317,
+				"y": 537
+			}
+		},
+		{
+			"name": "COS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 330,
+				"y": 537
+			}
+		},
+		{
+			"name": "TEC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 421,
+				"y": 514
+			}
+		},
+		{
+			"name": "TEC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 421,
+				"y": 537
+			}
+		},
+		{
+			"name": "PAC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 472,
+				"y": 661
+			}
+		},
+		{
+			"name": "PAC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 472,
+				"y": 694
+			}
+		},
+		{
+			"name": "CIC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 546,
+				"y": 805
+			}
+		},
+		{
+			"name": "CIC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 546,
+				"y": 781
+			}
+		},
+		{
+			"name": "NOG",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 661,
+				"y": 783
+			}
+		},
+		{
+			"name": "NOG1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 661,
+				"y": 755
+			}
+		},
+		{
+			"name": "HSP",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 754,
+				"y": 779
+			}
+		},
+		{
+			"name": "HSP1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 717,
+				"y": 759
+			}
+		},
+		{
+			"name": "UNS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 819,
+				"y": 872
+			}
+		},
+		{
+			"name": "UNS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 819,
+				"y": 851
+			}
+		},
+		{
+			"name": "UNS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 859,
+				"y": 851
+			}
+		},
+		{
+			"name": "CDC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 885,
+				"y": 786
+			}
+		},
+		{
+			"name": "CDC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 885,
+				"y": 766
+			}
+		},
+		{
+			"name": "CDC2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 845,
+				"y": 766
+			}
+		},
+		{
+			"name": "CDC3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 890,
+				"y": 730
+			}
+		},
+		{
+			"name": "LUC",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 719,
+				"y": 671
+			}
+		},
+		{
+			"name": "LUC1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 719,
+				"y": 690
+			}
+		},
+		{
+			"name": "LUC3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 759,
+				"y": 567
+			}
+		},
+		{
+			"name": "LUC4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 759,
+				"y": 591
+			}
+		},
+		{
+			"name": "FFA",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 619,
+				"y": 675
+			}
+		},
+		{
+			"name": "FFA1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 605,
+				"y": 675
+			}
+		},
+		{
+			"name": "FFA2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 605,
+				"y": 690
+			}
+		},
+		{
+			"name": "FFA3",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 585,
+				"y": 690
+			}
+		},
+		{
+			"name": "FFA4",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 555,
+				"y": 690
+			}
+		},
+		{
+			"name": "DCA",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 563,
+				"y": 601
+			}
+		},
+		{
+			"name": "DCA1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 583,
+				"y": 601
+			}
+		},
+		{
+			"name": "ACT",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 563,
+				"y": 560
+			}
+		},
+		{
+			"name": "MAK",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 812,
+				"y": 505
+			}
+		},
+		{
+			"name": "WESTLOT",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 881,
+				"y": 567
+			}
+		},
+		{
+			"name": "WESTLOT1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 801,
+				"y": 592
+			}
+		},
+		{
+			"name": "PAS",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 1039,
+				"y": 434
+			}
+		},
+		{
+			"name": "PAS1",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 948,
+				"y": 469
+			}
+		},
+		{
+			"name": "PAS2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 948,
+				"y": 527
+			}
+		},
+		{
+			"name": "BLOT6",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 675,
+				"y": 870
+			}
+		},
+		{
+			"name": "RAND",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 533,
+				"y": 901
+			}
+		},
+		{
+			"name": "RAND2",
+			"coordinates": {
+				"x": 50,
+				"y": 40
+			},
+			"pixelCoord": {
+				"x": 476,
+				"y": 855
 			}
 		}
 	],
 	"edges": [
 		{
-			"from": "0",
-			"to": "1",
-			"weight": 1
+			"from": "PAS",
+			"to": "PAS1",
+			"weight": 233
 		},
 		{
-			"from": "0",
-			"to": "2",
-			"weight": 2
+			"from": "PAS1",
+			"to": "PAS2",
+			"weight": 75
 		},
 		{
-			"from": "0",
-			"to": "3",
-			"weight": 5
+			"from": "PAS2",
+			"to": "MAK",
+			"weight": 164
 		},
 		{
-			"from": "1",
-			"to": "4",
-			"weight": 3
+			"from": "PAS2",
+			"to": "WESTLOT",
+			"weight": 183
 		},
 		{
-			"from": "2",
-			"to": "4",
-			"weight": 1
+			"from": "WESTLOT",
+			"to": "WESTLOT1",
+			"weight": 88
 		},
 		{
-			"from": "3",
-			"to": "4",
-			"weight": 1
+			"from": "WESTLOT1",
+			"to": "MAK",
+			"weight": 130
+		},
+		{
+			"from": "WESTLOT1",
+			"to": "LUC4",
+			"weight": 94
+		},
+		{
+			"from": "LUC3",
+			"to": "LUC4",
+			"weight": 20
+		},
+		{
+			"from": "WESTLOT",
+			"to": "CDC3",
+			"weight": 226
+		},
+		{
+			"from": "WESTLOT1",
+			"to": "QUAD7",
+			"weight": 215
+		},
+		{
+			"from": "QUAD7",
+			"to": "CDC3",
+			"weight": 124
+		},
+		{
+			"from": "CDC3",
+			"to": "CDC1",
+			"weight": 38
+		},
+		{
+			"from": "CDC1",
+			"to": "CDC",
+			"weight": 34
+		},
+		{
+			"from": "CDC",
+			"to": "CDC2",
+			"weight": 52
+		},
+		{
+			"from": "CDC2",
+			"to": "QUAD7",
+			"weight": 110
+		},
+		{
+			"from": "CDC2",
+			"to": "UNS2",
+			"weight": 152
+		},
+		{
+			"from": "QUAD7",
+			"to": "QUAD6",
+			"weight": 205
+		},
+		{
+			"from": "QUAD6",
+			"to": "LUC1",
+			"weight": 52
+		},
+		{
+			"from": "LUC1",
+			"to": "LUC",
+			"weight": 30
+		},
+		{
+			"from": "QUAD6",
+			"to": "HSP1",
+			"weight": 55
+		},
+		{
+			"from": "HSP1",
+			"to": "HSP",
+			"weight": 36
+		},
+		{
+			"from": "QUAD6",
+			"to": "QUAD5",
+			"weight": 105
+		},
+		{
+			"from": "QUAD5",
+			"to": "NOG1",
+			"weight": 30
+		},
+		{
+			"from": "NOG1",
+			"to": "NOG",
+			"weight": 27
+		},
+		{
+			"from": "NOG1",
+			"to": "HSP1",
+			"weight": 111
+		},
+		{
+			"from": "QUAD5",
+			"to": "QUAD4",
+			"weight": 100
+		},
+		{
+			"from": "QUAD4",
+			"to": "FFA2",
+			"weight": 52
+		},
+		{
+			"from": "FFA1",
+			"to": "FFA2",
+			"weight": 10
+		},
+		{
+			"from": "FFA1",
+			"to": "FFA",
+			"weight": 20
+		},
+		{
+			"from": "FFA2",
+			"to": "FFA3",
+			"weight": 23
+		},
+		{
+			"from": "FFA3",
+			"to": "FFA4",
+			"weight": 49
+		},
+		{
+			"from": "FFA4",
+			"to": "QUAD3",
+			"weight": 50
+		},
+		{
+			"from": "QUAD3",
+			"to": "QUAD4",
+			"weight": 60
+		},
+		{
+			"from": "FFA3",
+			"to": "DCA1",
+			"weight": 161
+		},
+		{
+			"from": "DCA1",
+			"to": "DCA",
+			"weight": 38
+		},
+		{
+			"from": "DCA",
+			"to": "ACT",
+			"weight": 51
+		},
+		{
+			"from": "FFA4",
+			"to": "PAC1",
+			"weight": 184
+		},
+		{
+			"from": "PAC1",
+			"to": "PAC",
+			"weight": 52
+		},
+		{
+			"from": "PAC1",
+			"to": "QUAD2",
+			"weight": 53
+		},
+		{
+			"from": "QUAD2",
+			"to": "QUAD3",
+			"weight": 124
+		},
+		{
+			"from": "QUAD3",
+			"to": "CIC1",
+			"weight": 57
+		},
+		{
+			"from": "CIC1",
+			"to": "CIC",
+			"weight": 39
+		},
+		{
+			"from": "CIC1",
+			"to": "NOG1",
+			"weight": 151
+		},
+		{
+			"from": "QUAD2",
+			"to": "RHN4",
+			"weight": 75
+		},
+		{
+			"from": "QUAD2",
+			"to": "QUAD1",
+			"weight": 134
+		},
+		{
+			"from": "QUAD1",
+			"to": "QUADUP",
+			"weight": 44
+		},
+		{
+			"from": "QUADUP",
+			"to": "HLOT",
+			"weight": 58
+		},
+		{
+			"from": "HLOT",
+			"to": "STS2",
+			"weight": 209
+		},
+		{
+			"from": "STS2",
+			"to": "STS1",
+			"weight": 45
+		},
+		{
+			"from": "STS1",
+			"to": "STS",
+			"weight": 28
+		},
+		{
+			"from": "STS1",
+			"to": "SHW",
+			"weight": 78
+		},
+		{
+			"from": "SHW",
+			"to": "COS1",
+			"weight": 80
+		},
+		{
+			"from": "COS1",
+			"to": "COS",
+			"weight": 36
+		},
+		{
+			"from": "COS1",
+			"to": "STS1",
+			"weight": 42
+		},
+		{
+			"from": "COS1",
+			"to": "COS2",
+			"weight": 34
+		},
+		{
+			"from": "COS2",
+			"to": "TEC1",
+			"weight": 109
+		},
+		{
+			"from": "TEC1",
+			"to": "TEC",
+			"weight": 17
+		},
+		{
+			"from": "STS2",
+			"to": "COS2",
+			"weight": 71
+		},
+		{
+			"from": "PAC1",
+			"to": "QUADUP",
+			"weight": 154
+		},
+		{
+			"from": "RHN4",
+			"to": "RHN3",
+			"weight": 70
+		},
+		{
+			"from": "RHN3",
+			"to": "RHN2",
+			"weight": 47
+		},
+		{
+			"from": "RHN2",
+			"to": "RHN1",
+			"weight": 28
+		},
+		{
+			"from": "RHN1",
+			"to": "RHN",
+			"weight": 20
+		},
+		{
+			"from": "RHN1",
+			"to": "QUAD1",
+			"weight": 158
+		},
+		{
+			"from": "RHN2",
+			"to": "CC",
+			"weight": 170
+		},
+		{
+			"from": "RHN4",
+			"to": "CC1",
+			"weight": 241
+		},
+		{
+			"from": "CC1",
+			"to": "CC",
+			"weight": 96
+		},
+		{
+			"from": "CC1",
+			"to": "CC2",
+			"weight": 90
+		},
+		{
+			"from": "CC2",
+			"to": "STC1",
+			"weight": 50
+		},
+		{
+			"from": "STC1",
+			"to": "STC",
+			"weight": 124
+		},
+		{
+			"from": "STC1",
+			"to": "STC2",
+			"weight": 36
+		},
+		{
+			"from": "STC1",
+			"to": "STC2",
+			"weight": 27
+		},
+		{
+			"from": "STC2",
+			"to": "CC3",
+			"weight": 30
+		},
+		{
+			"from": "STC2",
+			"to": "CC3",
+			"weight": 30
+		},
+		{
+			"from": "CC2",
+			"to": "CC3",
+			"weight": 30
+		},
+		{
+			"from": "CC3",
+			"to": "CC4",
+			"weight": 73
+		},
+		{
+			"from": "CC1",
+			"to": "CC4",
+			"weight": 87
+		},
+		{
+			"from": "CC1",
+			"to": "CC5",
+			"weight": 15
+		},
+		{
+			"from": "CC5",
+			"to": "CC6",
+			"weight": 72
+		},
+		{
+			"from": "CC6",
+			"to": "LRC",
+			"weight": 82
+		},
+		{
+			"from": "LRC",
+			"to": "CC4",
+			"weight": 101
+		},
+		{
+			"from": "CC4",
+			"to": "LRC1",
+			"weight": 100
+		},
+		{
+			"from": "CC5",
+			"to": "CC7",
+			"weight": 92
+		},
+		{
+			"from": "CC7",
+			"to": "CC",
+			"weight": 92
+		},
+		{
+			"from": "CC7",
+			"to": "RHS1",
+			"weight": 71
+		},
+		{
+			"from": "RHS1",
+			"to": "RHS2",
+			"weight": 43
+		},
+		{
+			"from": "RHS1",
+			"to": "RHS",
+			"weight": 25
+		},
+		{
+			"from": "CC7",
+			"to": "LRC",
+			"weight": 109
+		},
+		{
+			"from": "LRC",
+			"to": "RHS2",
+			"weight": 116
+		},
+		{
+			"from": "LRC",
+			"to": "LRC1",
+			"weight": 90
+		},
+		{
+			"from": "LRC1",
+			"to": "LRC2",
+			"weight": 35
+		},
+		{
+			"from": "LRC2",
+			"to": "SOG1",
+			"weight": 84
+		},
+		{
+			"from": "LRC1",
+			"to": "LRC2",
+			"weight": 35
+		},
+		{
+			"from": "SOG1",
+			"to": "SOG",
+			"weight": 135
+		},
+		{
+			"from": "SOG1",
+			"to": "STC2",
+			"weight": 53
+		},
+		{
+			"from": "SOG1",
+			"to": "SOG",
+			"weight": 135
+		},
+		{
+			"from": "LRC2",
+			"to": "BUS1",
+			"weight": 21
+		},
+		{
+			"from": "BUS1",
+			"to": "BUS",
+			"weight": 150
+		},
+		{
+			"from": "BUS1",
+			"to": "LRC3",
+			"weight": 100
+		},
+		{
+			"from": "LRC3",
+			"to": "CLOT1",
+			"weight": 64
+		},
+		{
+			"from": "LRC3",
+			"to": "BLOT1",
+			"weight": 259
+		},
+		{
+			"from": "BLOT2",
+			"to": "BLOT1",
+			"weight": 85
+		},
+		{
+			"from": "BUS",
+			"to": "BLOT2",
+			"weight": 102
+		},
+		{
+			"from": "BLOT3",
+			"to": "BLOT2",
+			"weight": 112
+		},
+		{
+			"from": "BLOT3",
+			"to": "SOG",
+			"weight": 93
+		},
+		{
+			"from": "BLOT3",
+			"to": "BLOT4",
+			"weight": 130
+		},
+		{
+			"from": "BLOT4",
+			"to": "STC",
+			"weight": 113
+		},
+		{
+			"from": "BLOT4",
+			"to": "BLOT5",
+			"weight": 90
+		},
+		{
+			"from": "BLOT5",
+			"to": "HSP1",
+			"weight": 160
+		},
+		{
+			"from": "BLOT5",
+			"to": "UNS1",
+			"weight": 160
+		},
+		{
+			"from": "UNS1",
+			"to": "UNS2",
+			"weight": 71
+		},
+		{
+			"from": "UNS1",
+			"to": "UNS",
+			"weight": 14
+		},
+		{
+			"from": "CLOT1",
+			"to": "GLOT1",
+			"weight": 247
+		},
+		{
+			"from": "GLOT1",
+			"to": "RHS2",
+			"weight": 205
+		},
+		{
+			"from": "GLOT1",
+			"to": "NAS2",
+			"weight": 225
+		},
+		{
+			"from": "NAS2",
+			"to": "NAS3",
+			"weight": 40
+		},
+		{
+			"from": "NAS2",
+			"to": "NAS1",
+			"weight": 50
+		},
+		{
+			"from": "NAS1",
+			"to": "NAS",
+			"weight": 30
+		},
+		{
+			"from": "NAS1",
+			"to": "CLOT1",
+			"weight": 320
+		},
+		{
+			"from": "NAS3",
+			"to": "MOH1",
+			"weight": 70
+		},
+		{
+			"from": "MOH",
+			"to": "MOH1",
+			"weight": 73
+		},
+		{
+			"from": "BLOT5",
+			"to": "BLOT6",
+			"weight": 102
+		},
+		{
+			"from": "BLOT6",
+			"to": "RAND",
+			"weight": 215
+		},
+		{
+			"from": "RAND",
+			"to": "RAND2",
+			"weight": 120
+		},
+		{
+			"from": "RAND",
+			"to": "CC2",
+			"weight": 52
 		}
 	]
 }
